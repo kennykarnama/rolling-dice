@@ -17,7 +17,7 @@ var (
 
 func main() {
 	arg.MustParse(&args)
-	gb, err := gameboard.NewGameBoard(3, 4)
+	gb, err := gameboard.NewGameBoard(args.NumPlayer, args.NumDice)
 	if err != nil {
 		panic(err)
 	}
